@@ -1,5 +1,4 @@
 import './App.css';
-import './assets/css/style.css';
 import { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -52,10 +51,10 @@ const StyledApp = styled.div`
   background-color: ${(props) => props.theme.backgroundPrimary};
   transition: all 0.25s ease;
 `
-const Name = styled.h1`
+const DaH1 = styled.h1`
   color: ${(props) => props.theme.title};
 `
-const Info = styled.p`
+const DaP = styled.p`
   color: ${(props) => props.theme.text};
 `
 
@@ -71,13 +70,14 @@ function App() {
     const newTheme = isDarkTheme ? 'light' : 'dark';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-  }
+  };
 
   return (
     <ThemeProvider theme={isDarkTheme ? DarkTheme : LightTheme}>
       <StyledApp>
 
         <div className="App">
+
           <div>
             <div className='toggle'>
               <SunIcon />
@@ -85,16 +85,20 @@ function App() {
               <MoonIcon />
             </div>
 
-            <Name>Welcome!</Name>
-            <Info>We are happy to have you back. Kindly login </Info>
+            <div>
+              <DaH1>Welcome!</DaH1>
+              <DaP>We are happy to have you back. Kindly login </DaP>
+            </div>
           </div>
-          <Form />
 
+          <div>
+            <Form />
+          </div>
         </div>
 
       </StyledApp>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

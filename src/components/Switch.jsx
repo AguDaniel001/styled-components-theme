@@ -24,7 +24,7 @@ const DaSpan = styled.span`
 
   &:hover {
     background-color:${(props) => props.theme.primaryLight};
-  }
+  };
 
   &::before {
     content: "";
@@ -37,15 +37,15 @@ const DaSpan = styled.span`
     left: 4px;
     transform: translateY(-50%);
     transition: 0.4s;
-  }
+  };
 
     &.toggled {
     background-color: ${(props) => props.theme.primary};
 
     &::before {
       left: calc(100% - 22px);
-    }
-  }
+    };
+  };
 `
 function Switch({toggleTheme, isDarkTheme}) {
   const [isToggled, setisToggled] = useState(isDarkTheme);

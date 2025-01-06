@@ -16,16 +16,17 @@ const DaButton = styled.button`
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s all ease-out;
+
   &:hover {
     background-color: ${(props) =>
-     props.variant !== 'outline' ? props.theme.primaryDark : props.theme.primary}; 
+    props.variant !== 'outline' ? props.theme.primaryDark : props.theme.primary}; 
      
     color:  ${(props) =>
-     props.variant !== 'outline' ? props.theme.constantWhi : props.theme.constantWhite};
+    props.variant !== 'outline' ? props.theme.constantWhi : props.theme.constantWhite};
      
-      border: 2px solid ${(props) =>
-     props.variant !== 'outline' ? props.theme.primaryDark : props.theme.transparent};
-  }
+    border: 2px solid ${(props) =>
+    props.variant !== 'outline' ? props.theme.primaryDark : props.theme.transparent};
+  };
 `
 
 export const FancyButton = styled(DaButton)`
@@ -37,13 +38,11 @@ export const FancyButton = styled(DaButton)`
     color: #fff;
   }
 `
-
 export const SubmitButton = styled(DaButton).attrs({
   type: 'submit',
 })`
   box-shadow: 1px 1px 9px #777;
 `
-
 export const DarkButton = styled(DaButton)`
   border: 2px solid ${(props) => props.theme.primary};
   background-color: ${(props) => props.theme.primary};
@@ -51,12 +50,11 @@ export const DarkButton = styled(DaButton)`
   &:hover {
   }
 `
-
 export const LightButton = styled(DaButton)`
   border: 2px solid ${(props) => props.theme.primary};
   background-color: ${(props) => props.theme.primary};
   color: ${(props) => props.theme.text};
-  
+
   &:hover {
     background-color: ${(props) =>
      (props.variant !== 'outline' ? '#fff' : '#6B4EFF')}; 
@@ -64,5 +62,5 @@ export const LightButton = styled(DaButton)`
      (props.variant !== 'outline' ? '#6B4EFF' : '#fff')};
   }
 `
-export default DaButton
+export default DaButton;
 

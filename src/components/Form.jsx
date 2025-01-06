@@ -1,7 +1,7 @@
 import React from 'react';
-import TextInput from './TextInput';
-
 import styled from 'styled-components';
+
+import TextInput from './TextInput';
 import DaButton from './Button';
 
 const DaForm = styled.div`
@@ -28,7 +28,6 @@ const DaH3 = styled.h3`
   color: ${(props) => props.theme.title};
 
 `
-
 const DaP = styled.p`
   color: ${(props) => props.theme.text};
 
@@ -39,36 +38,39 @@ const DaP = styled.p`
     font-weight: 500;
   }
 `
-
 const DaSpan = styled.span`
   color: ${(props) => props.theme.primary};
   cursor: pointer;
 
 `
-
-
 function Login() {
   return (
     <div>
       <DaForm>
         <DaBox>
 
-          <DaH3>Login</DaH3>
-          <TextInput />
           <div>
-          <DaP>Forgot password?</DaP>
-          <DaP>By continuing, you  agree to our<DaSpan> Terms of Services</DaSpan> and<DaSpan> Privacy Policy.</ DaSpan></DaP>
-          <br />
-          <br />
-          <DaButton>Login</DaButton>
-          <br />
-          <br />
-          <DaButton variant='outline'>Sign Up</DaButton>
+            <div>
+              <DaH3>Login</DaH3>
+              <TextInput />
+            </div>
+
+            <div>
+              <DaP>Forgot password?</DaP>
+              <DaP>By continuing, you  agree to our<DaSpan> Terms of Services</DaSpan> and<DaSpan> Privacy Policy.</ DaSpan></DaP>
+              <br />
+              <br />
+              <DaButton>Login</DaButton>
+              <br />
+              <br />
+              <DaButton variant='outline'>Sign Up</DaButton>
+            </div>
           </div>
+
         </DaBox>
       </DaForm>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
