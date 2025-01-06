@@ -7,8 +7,7 @@ import DaButton from './Button';
 const DaForm = styled.div`
   background-color: ${(props) => props.theme.transparent};
   font-size: 16px;
-  height: 95vh;
-  padding-top: 5vh;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   transition: all 0.2s ease;
