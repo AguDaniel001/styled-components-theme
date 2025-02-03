@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from 'styled-components';
 
 const DaLabel = styled.label`
-
   display: inline-block;
   width: 50px;
   height: 25px;
